@@ -176,7 +176,7 @@ def send_start(bot, update):
 
     keyboard = [[InlineKeyboardButton(text="⚙️Help",callback_data="help_back"),InlineKeyboardButton(text="❤️Owner❤️",url="https://t.me/Kaveesha_Induwara")]]
     keyboard += [[InlineKeyboardButton(text="♻️Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="Add Me➕",url="t.me/{}?startgroup=true".format(bot.username))]]
-    keyboard -= [[InlineKeyboardButton(text="🀄️Group🀄️",url="https://t.me/Tech_Wizard_Ent"),InlineKeyboardButton(text="🃏Channel🃏",url="https://t.me/Tech_Wizard_Entertainment")]]
+    keyboard = [[InlineKeyboardButton(text="🀄️Group🀄️",url="https://t.me/Tech_Wizard_Ent"),InlineKeyboardButton(text="🃏Channel🃏",url="https://t.me/Tech_Wizard_Entertainment")]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
